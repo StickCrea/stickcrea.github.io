@@ -1,0 +1,236 @@
+/* Estilo para el body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Estilo para el header */
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Estilo para el main */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+ul li p {
+  margin: 0;
+}
+
+ul li ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+ul li ul li {
+  margin-bottom: 5px;
+}
+/*Sobre MI*/
+#sobre-mi {
+  background-color: #f9f9f9;
+  padding: 50px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+#sobre-mi h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+}
+
+#sobre-mi p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilo para la sección de experiencia laboral */
+#experiencia {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #experiencia h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+  
+  #experiencia ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  #experiencia li {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 30px;
+    width: 400px;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #experiencia li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  #experiencia h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  #experiencia p {
+    margin: 0;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #experiencia ul li ul {
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  
+  #experiencia ul li ul li {
+    margin-bottom: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #experiencia ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #experiencia li {
+      width: 100%;
+    }
+  }
+  /* Estilos para la sección de educación */
+
+#educacion {
+    margin-top: 50px;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 50px;
+  }
+  
+  .card-header {
+    background-color: #0077b6;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .card-header h3.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .card-header p.card-subtitle {
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-body p.card-date {
+    margin-bottom: 10px;
+  }
+  
+  .card-body ul.card-description {
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  .card-body ul.card-description li {
+    margin-bottom: 10px;
+  }
+  
