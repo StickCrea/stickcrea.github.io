@@ -233,4 +233,96 @@ footer {
   .card-body ul.card-description li {
     margin-bottom: 10px;
   }
-  
+
+  /* ESTILO TABLA  */
+ 
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ddd;
+  }
+
+  caption {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+  }
+
+  th {
+    background-color: #0077b6;
+    color: white;
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #ddd;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 5px 0;
+  }
+
+  i {
+    margin-right: 5px;
+    color: #0077b6;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding: 5px 0;
+  }
+
+  li i {
+    margin-right: 5px;
+    font-size: 20px;
+  }
+
+  li i.fab.fa-html5 {
+    color: #E34C26; /* Color para HTML5 */
+  }
+
+  li i.fab.fa-css3-alt {
+    color: #1572B6; /* Color para CSS3 */
+  }
+
+  li i.fab.fa-js {
+    color: #F7DF1E; /* Color para JavaScript */
+  }
+  li i.fa-brands.fa-php {
+    color: #8892BF; /* Color para PHP */
+  }
+
+  li i.fas.fa-database {
+    color: #f1cf0a; /* Color para SQL */
+  }
+
+  li i.fa-solid.fa-desktop {
+    color: #080808; /* Color para Mantenimiento de Equipos de cómputo a nivel de software */
+  }
+  li i.fa-square-git {
+    color: #F05032; /* Color para Git */
+  }
+
+  li i.fa-github {
+    color: #171515; /* Color para GitHub */
+  }
