@@ -6,6 +6,7 @@ body {
   background-color: #f5f5f5;
 }
 
+
 /* Estilo para el header */
 header {
   background-color: #333;
@@ -240,16 +241,18 @@ footer {
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
-    border: 1px solid #ddd;
+    border: 1px solid #030303;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
   }
 
   caption {
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 10px;
+    padding: 5px;
     background-color: #0077b6;
     color: white;
+    border: 1px solid #030303;
   }
 
   th {
@@ -257,14 +260,14 @@ footer {
     color: white;
     padding: 8px;
     text-align: center;
-    border-bottom: 2px solid #ddd;
+    border: 1px solid #030303;
   }
 
   td {
     padding: 8px;
     text-align: left;
     vertical-align: top;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #030303;
   }
 
   ul {
