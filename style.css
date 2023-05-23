@@ -9,18 +9,31 @@ body {
 
 /* Estilo para el header */
 header {
-  background-color: #333;
+  background-color: #0077b6;
   color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 36px;
+@media (max-width: 768px) {
+  .ImgP {
+    max-width: 250px;
+  }
 }
+
+@media (max-width: 480px) {
+  .ImgP {
+    max-width: 150px;
+  }
+}
+
+.ImgP {
+  width: 100%;
+  max-width: 300px; /* Ajusta este valor según tus necesidades */
+  height: auto;
+}
+
 
 header nav ul {
   list-style: none;
@@ -238,6 +251,7 @@ footer {
   /* ESTILO TABLA  */
  
   table {
+    margin-top: 100px;
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
