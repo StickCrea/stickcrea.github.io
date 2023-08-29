@@ -15,6 +15,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
  
 }
 nav{
@@ -56,8 +57,10 @@ header nav a {
 /* Estilo para el main */
 main {
   max-width: 800px;
-  margin: 0 auto;
+  margin:  auto;
+
   padding: 40px;
+  
 }
 
 section {
@@ -102,6 +105,7 @@ ul li ul li {
   background-color: #f9f9f9;
   padding: 50px;
   border: 1px solid #ddd;
+  margin-top: 100px;
   margin-bottom: 30px;
 }
 
