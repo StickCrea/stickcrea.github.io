@@ -1,9 +1,11 @@
 /* Estilo para el body */
 body {
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
+  width: 100%;
 }
 
 
@@ -16,25 +18,27 @@ header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
- 
 }
-nav{
+nav {
   margin: 0;
 }
-.Img0{
+.Img0 {
   width: 180px;
   height: 220px;
   margin-left: 1%;
-  
 }
-  
-.Img1{
+
+.Img1 {
   width: 100%;
   height: 100%;
   margin-bottom: 10px;
 }
-  
 
+.Imgpie {
+  width: 180px;
+  height: 220px;
+  margin-left: 1%;
+}
 
 
 header nav ul {
@@ -46,21 +50,35 @@ header nav ul {
 
 header nav li {
   margin-right: 20px;
+
 }
 
 header nav a {
-  color: #0e0000;
   text-decoration: none;
-  font-size: 18px;
+  position: relative;
+  padding: 0 0 0.5rem;
+  color: #000102da;
+  font-size: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2857142857;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+
+}
+/* code menu  hover*/
+nav ul li a:hover{
+  color: #bbbbbb;
+  
+  
 }
 
 /* Estilo para el main */
 main {
   max-width: 800px;
-  margin:  auto;
+  margin: auto;
 
   padding: 40px;
-  
 }
 
 section {
@@ -104,10 +122,11 @@ ul li ul li {
 #sobre-mi {
   background-color: #f9f9f9;
   padding: 50px;
-  border: 1px solid #ddd;
+  border: 1px solid #131212;
   margin-top: 100px;
   margin-bottom: 30px;
 }
+
 
 #sobre-mi h2 {
   font-size: 40px;
@@ -124,227 +143,231 @@ ul li ul li {
   color: #666;
 }
 
-/* Estilo para el footer */
-footer {
-  background-color: #fffbfb83;
-  color: #080101;
-  padding: 20px;
+/* Estilo para la sección de experiencia laboral */
+#experiencia {
+  background-color: #f7f7f7;
+  padding: 50px 0;
   text-align: center;
 }
 
-/* Estilo para la sección de experiencia laboral */
-#experiencia {
-    background-color: #f7f7f7;
-    padding: 50px 0;
-    text-align: center;
-  }
-  
-  #experiencia h2 {
-    font-size: 32px;
-    margin-bottom: 50px;
-  }
-  
+#experiencia h2 {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+#experiencia ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#experiencia li {
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 20px;
+  padding: 30px;
+  width: 400px;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+#experiencia li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+#experiencia h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#experiencia p {
+  margin: 0;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#experiencia ul li ul {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+#experiencia ul li ul li {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
   #experiencia ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   #experiencia li {
-    background-color: #fff;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    margin: 20px;
-    padding: 30px;
-    width: 400px;
-    text-align: left;
-    transition: all 0.3s ease-in-out;
+    width: 100%;
   }
-  
-  #experiencia li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  #experiencia h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  #experiencia p {
-    margin: 0;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  #experiencia ul li ul {
-    margin-left: 30px;
-    margin-top: 20px;
-  }
-  
-  #experiencia ul li ul li {
-    margin-bottom: 5px;
-  }
-  
-  @media screen and (max-width: 768px) {
-    #experiencia ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    #experiencia li {
-      width: 100%;
-    }
-  }
-  /* Estilos para la sección de educación */
+}
+/* Estilos para la sección de educación */
 
 #educacion {
-    margin-top: 50px;
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-  }
-  
-  .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin-bottom: 50px;
-  }
-  
-  .card-header {
-    background-color: #0077b6;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .card-header h3.card-title {
-    margin: 0;
-    font-size: 1.5rem;
-  }
-  
-  .card-header p.card-subtitle {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .card-body {
-    padding: 20px;
-  }
-  
-  .card-body p.card-date {
-    margin-bottom: 10px;
-  }
-  
-  .card-body ul.card-description {
-    list-style: disc;
-    margin-left: 20px;
-  }
-  
-  .card-body ul.card-description li {
-    margin-bottom: 10px;
-  }
+  margin-top: 50px;
+}
 
-  /* ESTILO TABLA  */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+/* Estilo para el footer */
+footer {
+  background-color: #f1f1f183;
+  color: #080101;
+  width: 100%;
+   
+
  
-  table {
-    margin-top: 100px;
-    border-collapse: collapse;
-    width: 100%;
-    font-family: Arial, sans-serif;
-    border: 1px solid #030303;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
-  }
+  text-align: center;
+}
 
-  caption {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px;
-    background-color: #0077b6;
-    color: white;
-    border: 1px solid #030303;
-  }
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin-bottom: 50px;
+}
 
-  th {
-    background-color: #0077b6;
-    color: white;
-    padding: 8px;
-    text-align: center;
-    border: 1px solid #030303;
-  }
+.card-header {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 20px;
+}
 
-  td {
-    padding: 8px;
-    text-align: left;
-    vertical-align: top;
-    border: 1px solid #030303;
-  }
+.card-header h3.card-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+.card-header p.card-subtitle {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
-  li {
-    padding: 5px 0;
-  }
+.card-body {
+  padding: 20px;
+}
 
-  i {
-    margin-right: 5px;
-    color: #0077b6;
-  }
+.card-body p.card-date {
+  margin-bottom: 10px;
+}
 
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
+.card-body ul.card-description {
+  list-style: disc;
+  margin-left: 20px;
+}
 
-  li {
-    padding: 5px 0;
-  }
+.card-body ul.card-description li {
+  margin-bottom: 10px;
+}
 
-  li i {
-    margin-right: 5px;
-    font-size: 20px;
-  }
+/* ESTILO TABLA  */
 
-  li i.fab.fa-html5 {
-    color: #E34C26; /* Color para HTML5 */
-  }
+table {
+  margin-top: 100px;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  border: 1px solid #030303;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+}
 
-  li i.fab.fa-css3-alt {
-    color: #1572B6; /* Color para CSS3 */
-  }
+caption {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px;
+  background-color: #0077b6;
+  color: white;
+  border: 1px solid #030303;
+}
 
-  li i.fab.fa-js {
-    color: #F7DF1E; /* Color para JavaScript */
-  }
-  li i.fa-brands.fa-php {
-    color: #8892BF; /* Color para PHP */
-  }
+th {
+  background-color: #0077b6;
+  color: white;
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #030303;
+}
 
-  li i.fas.fa-database {
-    color: #f1cf0a; /* Color para SQL */
-  }
+td {
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #030303;
+}
 
-  li i.fa-solid.fa-desktop {
-    color: #080808; /* Color para Mantenimiento de Equipos de cómputo a nivel de software */
-  }
-  li i.fa-square-git {
-    color: #F05032; /* Color para Git */
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
 
-  li i.fa-github {
-    color: #171515; /* Color para GitHub */
-  }
+li {
+  padding: 5px 0;
+}
+
+i {
+  margin-right: 5px;
+  color: #0077b6;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+li i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+li i.fab.fa-html5 {
+  color: #e34c26; /* Color para HTML5 */
+}
+
+li i.fab.fa-css3-alt {
+  color: #1572b6; /* Color para CSS3 */
+}
+
+li i.fab.fa-js {
+  color: #f7df1e; /* Color para JavaScript */
+}
+li i.fa-brands.fa-php {
+  color: #8892bf; /* Color para PHP */
+}
+
+li i.fas.fa-database {
+  color: #f1cf0a; /* Color para SQL */
+}
+
+li i.fa-solid.fa-desktop {
+  color: #080808; /* Color para Mantenimiento de Equipos de cómputo a nivel de software */
+}
+li i.fa-square-git {
+  color: #f05032; /* Color para Git */
+}
+
+li i.fa-github {
+  color: #171515; /* Color para GitHub */
+}
+
