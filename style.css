@@ -15,18 +15,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   position: fixed;
   
 }
-nav {
-  width: 100%;
-  margin-left: 500px;
-  
-}
+
 .Img0 {
   width: 120px;
   height: 120px;
-  margin-left: 3%;
+  
   
   
 }
@@ -48,9 +45,16 @@ nav {
 .imgpi2 {
   height: 120px;
 }
+nav {
+  align-items: center;
+
+  margin-right: 10%;
+
+}
 header nav ul {
   list-style: none;
   display: flex;
+  
   
   margin: 0;
   padding: 0;
@@ -64,14 +68,10 @@ header nav li {
 
 header nav a {
   text-decoration: none;
-  position: relative;
-  padding: 0 0 0.5rem;
-  color: #000102da;
-  font-size: 10px;
+  color: #ffffffda;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2857142857;
-  letter-spacing: 0.075em;
   text-transform: uppercase;
   
   
