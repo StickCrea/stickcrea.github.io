@@ -1,0 +1,169 @@
+/* Estilo para el body */
+body {
+  box-sizing: border-box;
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  margin: 0;
+}
+
+/* Estilo para el header */
+header {
+  background: rgb(0, 118, 182);
+  background: radial-gradient(
+    circle,
+    rgba(0, 118, 182, 1) 39%,
+    rgba(193, 190, 190, 1) 100%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+}
+
+.Img0 {
+  width: 120px;
+  height: 120px;
+}
+
+.Img1 {
+  width: 100%;
+  height: 100%;
+}
+
+.Imgpie {
+  display: flex;
+  width: 165px;
+  height: 120px;
+  background-color: #eff3f700;
+  margin: 10px;
+}
+.imgpi2 {
+  height: 120px;
+}
+nav {
+  align-items: center;
+  margin-right: 8%;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #ffffffda;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2857142857;
+  text-transform: uppercase;
+}
+/* code menu  hover*/
+nav .firts {
+  text-align: center;
+  background-color: #000000;
+  width: 120px;
+  height: 20px;
+  border-radius: 15px;
+}
+nav .firts a {
+  color: #ffffff;
+}
+nav li:hover {
+  text-align: center;
+  background-color: #000000;
+  width: 120px;
+  height: 20px;
+  border-radius: 15px;
+  transition: 2ms;
+}
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Estilo para el main */
+main {
+  max-width: 800px;
+  margin: auto;
+
+  padding: 40px;
+}
+
+.Info {
+  margin: auto;
+  display: inline-block;
+  width: 50%;
+  height: 180px;
+  margin-top: -100px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+ul li p {
+  margin: 0;
+}
+
+ul li ul {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+ul li ul li {
+  margin-bottom: 5px;
+}
+/*Sobre MI*/
+#sobre-mi {
+  background-color: #f9f9f9;
+  padding: 50px;
+  border: 1px solid #131212;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+#sobre-mi h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  text-transform: uppercase;
+}
+
+#sobre-mi p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #666;
+}
+
+.space{
+    margin-top: 500px;
+}
