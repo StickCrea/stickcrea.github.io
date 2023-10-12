@@ -1,10 +1,9 @@
 /* Estilo para el body */
 body {
   box-sizing: border-box;
-  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica,
-    Arial, sans-serif;
+  font-family: "Montserrat-Regular";
     margin:0;
-    
+    background: #1d1d20;
  
 }
 
@@ -69,12 +68,12 @@ header nav li {
 
 header nav a {
   text-decoration: none;
-  color: #ffffffda;
+  color: #000000da;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2857142857;
   text-transform: uppercase;
-  
+  border:#ffffff;
   
 }
 /* code menu  hover*/
