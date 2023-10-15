@@ -171,3 +171,8 @@ button {
   cursor: pointer;
   height: 10%;
 }
+
+.perfil {
+  width: 120px;
+  height: 120px;
+}
