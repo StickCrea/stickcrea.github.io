@@ -271,12 +271,7 @@
             <span class="eyebrow">Formación</span>
             <h2>Educación</h2>
           </div>
-          <div class="glass-card no-tilt reveal" style="max-width:640px; margin:0 auto; padding:1.75rem 2rem;">
-            <h3 id="eduTitle"></h3>
-            <p class="exp-company" id="eduInstitution"></p>
-            <p class="exp-period" id="eduPeriod" style="display:inline-block; margin-bottom:.9rem;"></p>
-            <p id="eduDetail"></p>
-          </div>
+          <div class="experience-list" id="educationList" style="max-width:640px;"></div>
         </div>
       </section>
 
@@ -382,11 +377,5 @@
     <script src="assets/js/cards.js"></script>
     <script src="assets/js/render.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      document.getElementById("eduTitle").textContent = SITE_DATA.education.title;
-      document.getElementById("eduInstitution").textContent = SITE_DATA.education.institution;
-      document.getElementById("eduPeriod").textContent = SITE_DATA.education.period;
-      document.getElementById("eduDetail").textContent = SITE_DATA.education.detail;
-    </script>
   </body>
 </html>

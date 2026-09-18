@@ -32,8 +32,8 @@ const SITE_DATA = {
   experience: [
     {
       role: "Applications Analyst",
-      company: "Plataforma TMS empresarial multiempresa",
-      period: "Rol actual",
+      company: "Phari Tech Services",
+      period: "Mayo 2025 – Actualidad",
       hook: "Del botón en pantalla hasta la última fila de la base de datos.",
       summary:
         "Trabajo sobre una plataforma TMS legacy que soporta operaciones de transporte de carga y logística de vehículos, integrada con el RNDC del Ministerio de Transporte, un ERP corporativo, una plataforma de gastos y anticipos, un portal de clientes y servicios de telemetría GPS.",
@@ -42,24 +42,43 @@ const SITE_DATA = {
         "Diagnóstico de fallas de integración, corrección de causas raíz, automatización de procesos manuales y trazabilidad sobre documentos de transporte. El detalle completo está en la sección de casos.",
     },
     {
-      role: "Aprendiz · Técnico en Desarrollo de Software",
+      role: "LATAM IT Infrastructure Agent",
+      company: "Beyond ONE",
+      period: "Octubre 2023 – Abril 2025",
+      hook: "Cuando la infraestructura funciona bien, nadie la nota.",
+      summary:
+        "Soporte y administración de infraestructura IT para operaciones de la región LATAM: gestión de usuarios y plataformas, administración de bases de datos y aseguramiento de calidad en entornos híbridos (Colombia).",
+      tags: ["AWS", "Windows Server", "Google Cloud", "SQL / MySQL"],
+      more:
+        "Trabajo diario con administración de consolas y bases de datos, seguimiento de incidentes en JIRA y pruebas de software antes de cada cambio.",
+    },
+    {
+      role: "Aprendiz en Prácticas",
       company: "Virgin Mobile",
       period: "Abril 2023 – Octubre 2023",
       hook: "Los primeros pasos construyendo software en un entorno real.",
       summary:
-        "Formación práctica aplicada dentro de un equipo de desarrollo, con enfoque en control de versiones y trabajo colaborativo.",
-      tags: ["Git", "GitHub"],
+        "Primera experiencia profesional en infraestructura y bases de datos: administración de bases de datos, resolución de problemas y fundamentos de Linux, Windows Server y la nube (AWS, Google Cloud).",
+      tags: ["MySQL", "Linux", "AWS", "Trabajo en equipo"],
       more:
-        "Etapa formativa que marcó el inicio del camino hacia el desarrollo backend, datos e integraciones que ocupan el trabajo actual.",
+        "Etapa formativa que marcó el inicio del camino hacia el backend, los datos y las integraciones que ocupan el trabajo actual.",
     },
   ],
 
-  education: {
-    title: "Técnico en Programación de Software",
-    institution: "SENA",
-    period: "Julio 2022 – Octubre 2023",
-    detail: "Formación técnica en desarrollo, análisis y mantenimiento de software.",
-  },
+  education: [
+    {
+      title: "Ingeniería de Sistemas",
+      institution: "Corporación Unificada Nacional de Educación Superior (CUN)",
+      period: "Febrero 2024 – Actualidad",
+      detail: "Cursando la carrera en paralelo al trabajo; actualmente en 5.º y 6.º semestre.",
+    },
+    {
+      title: "Técnico en Programación de Software",
+      institution: "SENA",
+      period: "Julio 2022 – Octubre 2023",
+      detail: "Formación técnica en desarrollo, análisis y mantenimiento de software.",
+    },
+  ],
 
   // ---- Categorías usadas para taggear casos ----
   categories: [
@@ -325,6 +344,7 @@ const SITE_DATA = {
     { group: "Backend", items: ["Python", "Node.js", "Flask"] },
     { group: "Data", items: ["T-SQL", "PostgreSQL", "MySQL", "Pandas"] },
     { group: "Integrations", items: ["REST", "JSON", "XML", "Web Services"] },
+    { group: "Cloud / Infra", items: ["AWS", "Google Cloud", "Windows Server", "Linux"] },
     { group: "AI", items: ["Anthropic API", "Agent Architecture"] },
     { group: "Tools", items: ["Git", "GitHub", "Confluence"] },
   ],
@@ -335,6 +355,7 @@ const SITE_DATA = {
     { group: "Data", items: ["Pandas", "Tableau", "Power BI", "SQL analytics"] },
     { group: "Integrations", items: ["REST/JSON", "XML", "Web Services XML", "ERP integrations", "RNDC integrations", "Telemetry APIs"] },
     { group: "Automation", items: ["Python automation", "Backend processes", "Database procedures", "Batch flows"] },
+    { group: "Cloud / Infra", items: ["AWS", "AWS Lambda", "Google Cloud", "Windows Server", "Linux"] },
     { group: "Legacy / Enterprise", items: ["ASP Classic", "VBScript", "SQL Server", "Sistemas empresariales existentes"] },
     { group: "AI", items: ["Anthropic API", "Agent architectures", "System prompts", "AI-assisted workflows"] },
     { group: "Tools", items: ["Git", "GitHub", "Confluence", "Jira"] },

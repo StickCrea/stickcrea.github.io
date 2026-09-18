@@ -74,6 +74,27 @@ function renderExperience() {
   });
 }
 
+/* ---------- Formación ---------- */
+function renderEducation() {
+  const list = $("#educationList");
+  if (!list) return;
+  list.innerHTML = SITE_DATA.education
+    .map(
+      (edu, i) => `
+    <article class="glass-card exp-card reveal" style="--i:${i}">
+      <div class="exp-head">
+        <div>
+          <h3>${edu.title}</h3>
+          <p class="exp-company">${edu.institution}</p>
+        </div>
+        <span class="exp-period">${edu.period}</span>
+      </div>
+      <p>${edu.detail}</p>
+    </article>`
+    )
+    .join("");
+}
+
 /* ---------- Casos ---------- */
 function caseDetailMarkup(c) {
   let extra = "";
@@ -418,6 +439,7 @@ function renderFooter() {
 function renderAll() {
   renderRotatingRole();
   renderExperience();
+  renderEducation();
   renderCases();
   renderProblems();
   renderMethodology();
