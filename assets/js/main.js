@@ -1,62 +1,76 @@
-// Año dinámico en el footer
-document.getElementById("year").textContent = new Date().getFullYear();
+/**
+ * main.js — orquesta la inicialización del sitio: detecta capacidades
+ * del dispositivo, ajusta la intensidad visual, renderiza el contenido
+ * y arranca cada módulo. Pausa animaciones fuera de viewport y con la
+ * pestaña oculta para mantener el rendimiento.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const reduced = prefersReducedMotion();
+  const lowPower = isLowPowerDevice() || isTouchDevice();
 
-// Menú móvil
-const navToggle = document.getElementById("navToggle");
-const primaryNav = document.getElementById("primaryNav");
+  if (reduced || lowPower) {
+    document.documentElement.dataset.fx = "low";
+  }
 
-navToggle.addEventListener("click", () => {
-  const isOpen = primaryNav.classList.toggle("open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+  renderAll();
+  initNav();
+  initReveal();
+  initTimelineDraw();
+  initCardInteractions();
+  initCursor();
+  initContactForm();
 
-primaryNav.querySelectorAll("a").forEach((link) => {
-  link.addEventListener("click", () => {
-    primaryNav.classList.remove("open");
-    navToggle.setAttribute("aria-expanded", "false");
-  });
-});
+  // ---- Red de nodos del Hero ----
+  const canvas = $("#heroNetwork");
+  if (canvas) {
+    const network = new NodeNetwork(canvas, {
+      coreLabels: ["Usuario", "Aplicación", "Backend", "Base de datos", "API", "Automatización"],
+      particleDensity: reduced || lowPower ? 0.4 : 1,
+      reducedMotion: reduced,
+    });
 
-// Resaltar el enlace activo del menú según la sección visible
-const sections = document.querySelectorAll("main section[id]");
-const navLinks = document.querySelectorAll(".nav-link");
-
-const navObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "active",
-            link.getAttribute("href") === `#${entry.target.id}`
-          );
+    const heroObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) network.start();
+          else network.stop();
         });
-      }
-    });
-  },
-  { rootMargin: "-40% 0px -55% 0px" }
-);
-sections.forEach((section) => navObserver.observe(section));
+      },
+      { threshold: 0.05 }
+    );
+    heroObserver.observe(canvas);
 
-// Animación de aparición al hacer scroll
-const revealObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        observer.unobserve(entry.target);
-      }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) network.stop();
+      else if (canvas.getBoundingClientRect().top < window.innerHeight) network.start();
     });
-  },
-  { threshold: 0.15 }
-);
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+  }
 
-// Botón volver arriba
-const backToTop = document.getElementById("backToTop");
-window.addEventListener("scroll", () => {
-  backToTop.classList.toggle("visible", window.scrollY > 500);
+  // El contenido se arma dinámicamente desde data.js, así que un enlace
+  // directo con hash (ej. index.html#contacto) puede llegar antes de que
+  // el layout final exista. Se corrige la posición una vez que todo está listo.
+  if (location.hash) {
+    const target = $(location.hash);
+    if (target) requestAnimationFrame(() => target.scrollIntoView({ behavior: "auto" }));
+  }
 });
-backToTop.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+
+/**
+ * initContactForm — El sitio es estático (GitHub Pages, sin backend),
+ * así que el formulario compone un mailto: con los datos ingresados en
+ * vez de enviarlos a un servicio de terceros. No se guarda ni se
+ * transmite nada a servidores propios.
+ */
+function initContactForm() {
+  const form = $("#contactForm");
+  if (!form) return;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = $("#cf-name", form).value.trim();
+    const message = $("#cf-message", form).value.trim();
+    const email = SITE_DATA.contact.email;
+    const subject = encodeURIComponent(`Contacto desde StivCrea — ${name || "sin nombre"}`);
+    const body = encodeURIComponent(message || "");
+    window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  });
+}

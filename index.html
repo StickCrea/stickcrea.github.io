@@ -1,270 +1,393 @@
 <!--
-  Portafolio de Stiven Cuesta Mena (StivCrea)
-  Reconstrucción 2026 del portafolio original de 2023.
+  StivCrea 2.0 — Portafolio de Stiven Cuesta Mena (nombre legal: Estiven Cuesta Mena)
+  Reconstrucción 2026. Ver /legacy-2023 para la versión original de 2023.
 -->
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portafolio de Stiven Cuesta Mena — Técnico en Desarrollo de Software." />
-    <link rel="shortcut icon" href="Imgs/Bg/Logo-Sn.png" type="image/png" />
-    <title>StivCrea · Stiven Cuesta Mena</title>
+    <title>Stiven Cuesta Mena · StivCrea — Applications Analyst, Backend, Data, Automation</title>
+    <meta
+      name="description"
+      content="Estiven Cuesta Mena (StivCrea) — Applications Analyst especializado en backend, datos, automatización e integraciones empresariales. Sistemas TMS, ERP, RNDC y trazabilidad."
+    />
+    <link rel="canonical" href="https://stickcrea.github.io/" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="Imgs/brand/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="Imgs/brand/favicon-192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="Imgs/brand/favicon-180.png" />
+    <link rel="shortcut icon" href="Imgs/brand/favicon.ico" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Stiven Cuesta Mena · StivCrea — Applications Analyst, Backend, Data, Automation" />
+    <meta
+      property="og:description"
+      content="Construyo, diagnostico y automatizo sistemas empresariales con software, datos e integraciones."
+    />
+    <meta property="og:image" content="Imgs/Img-Logo/image.png" />
+    <meta property="og:url" content="https://stickcrea.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stiven Cuesta Mena · StivCrea" />
+    <meta name="twitter:description" content="Applications Analyst · Backend · Data · Automation" />
+    <meta name="twitter:image" content="Imgs/Img-Logo/image.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/tokens.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <link rel="stylesheet" href="assets/css/sections.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
   </head>
   <body>
     <a class="skip-link" href="#main">Saltar al contenido</a>
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-    <header class="site-header" id="top">
-      <div class="nav-wrap">
-        <a class="brand" href="#top" aria-label="StivCrea, inicio">
-          <img src="Imgs/Principal.png" alt="StivCrea" class="brand-logo" />
+    <!-- Fondo vivo: aurora + grilla + grano. Ver base.css / tokens.css -->
+    <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="#inicio">
+          <img class="brand-mark" src="Imgs/brand/mark-square.png" alt="" />
+          <span>Stiven Cuesta<small>STIVCREA</small></span>
         </a>
 
-        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
           <span></span><span></span><span></span>
         </button>
 
-        <nav class="primary-nav" id="primaryNav">
-          <ul>
-            <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-            <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-            <li><a href="#educacion" class="nav-link">Educación</a></li>
-            <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-            <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
-          </ul>
+        <nav class="nav-links" id="navLinks">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#casos">Casos</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#stack">Stack</a>
+          <a href="#formacion">Formación</a>
+          <a href="#contacto">Contacto</a>
         </nav>
       </div>
     </header>
 
     <main id="main">
-      <!-- Hero -->
+      <!-- ============ HERO ============ -->
       <section class="hero" id="inicio">
-        <div class="hero-text reveal">
-          <p class="eyebrow">Hola, soy</p>
-          <h1>Stiven Cuesta Mena</h1>
-          <p class="role">Técnico en Desarrollo de Software</p>
-          <p class="lead">
-            Apasionado por resolver problemas con análisis profundo y soluciones lógicas y efectivas.
-            Disfruto trabajar en equipo y aportar ideas que sumen valor a cada proyecto.
+        <div class="container hero-inner">
+          <span class="hero-tag">BUILDING · DIAGNOSING · AUTOMATING</span>
+          <h1>STIVEN CUESTA MENA</h1>
+          <p class="role-line">Applications Analyst</p>
+          <p class="rotating" id="rotatingRole">
+            <span class="rotating-text">Applications Analyst</span><span class="caret">&nbsp;</span>
           </p>
+          <p class="pitch">Construyo, diagnostico y automatizo sistemas empresariales con software, datos e integraciones.</p>
+
           <div class="hero-actions">
-            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-            <a href="#contacto" class="btn btn-ghost">Contáctame</a>
+            <a href="#casos" class="btn btn-primary">Ver casos</a>
+            <a href="#proyectos" class="btn btn-ghost">Ver proyectos</a>
+            <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer" class="btn btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#contacto" class="btn btn-ghost">LinkedIn</a>
           </div>
-          <ul class="hero-social">
-            <li>
-              <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <!-- TODO: reemplazar con tu URL real de LinkedIn -->
-              <a href="https://www.linkedin.com/in/tu-perfil-de-linkedin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-            </li>
-            <li>
-              <a href="mailto:stivencuestamena@gmail.com" aria-label="Correo electrónico">
-                <i class="far fa-envelope"></i>
-              </a>
-            </li>
-          </ul>
+
+          <div class="hero-tech-refs" aria-hidden="true">
+            <span class="tag-pill">SQL</span><span class="tag-pill">API</span><span class="tag-pill">XML</span>
+            <span class="tag-pill">JSON</span><span class="tag-pill">Backend</span><span class="tag-pill">Automation</span><span class="tag-pill">AI</span>
+          </div>
         </div>
 
-        <div class="hero-media reveal">
-          <div class="hero-blob"></div>
-          <img src="Imgs/Img-Logo/perfil.png" alt="Foto de Stiven Cuesta Mena" class="hero-photo" />
+        <div class="hero-diagram" aria-hidden="true">
+          <canvas id="heroNetwork"></canvas>
         </div>
       </section>
 
-      <!-- Sobre mí -->
+      <!-- ============ SOBRE MÍ ============ -->
       <section class="section" id="sobre-mi">
-        <div class="section-head reveal">
-          <span class="tag">Sobre mí</span>
-          <h2>¿Quién soy?</h2>
-        </div>
-        <div class="about-grid reveal">
-          <p>
-            Soy un joven apasionado por desafiarme cada día y aprender de nuevas experiencias.
-            Mi enfoque consiste en abordar los problemas con un análisis profundo y una comprensión
-            sólida, buscando siempre soluciones lógicas y efectivas.
-          </p>
-          <p>
-            Mi capacidad para generar y gestionar ideas que beneficien a todos es una de mis principales
-            fortalezas. Además, disfruto trabajar en equipo de manera eficiente, colaborando con mis
-            compañeros y contribuyendo al éxito del grupo. Siempre estoy dispuesto a ayudar y me esfuerzo
-            al máximo por ofrecer las mejores soluciones posibles.
-          </p>
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Sobre mí</span>
+            <h2>Entre aplicaciones, backend, datos e integraciones</h2>
+            <p>
+              Trabajo en el punto donde una aplicación empresarial, su backend, su base de datos y sus integraciones
+              externas se cruzan. No me defino solo como desarrollador de software: diagnostico fallas, corrijo causas
+              raíz, automatizo procesos manuales y dejo trazabilidad en sistemas que ya están en producción.
+            </p>
+          </div>
+          <p class="visually-hidden">Nombre legal: Estiven Cuesta Mena. Marca personal: StivCrea.</p>
         </div>
       </section>
 
-      <!-- Experiencia -->
+      <!-- ============ LO QUE SÉ RESOLVER ============ -->
+      <section class="section" id="resuelvo">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Lo que sé resolver</span>
+            <h2>Problemas, no solo tecnologías</h2>
+            <p>Una lista de tecnologías dice poco. Esto es lo que realmente aparece en el día a día.</p>
+          </div>
+          <div class="problems-grid" id="problemsGrid"></div>
+        </div>
+      </section>
+
+      <!-- ============ CÓMO PIENSO ============ -->
+      <section class="section" id="metodologia">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Cómo pienso antes de tocar código</span>
+            <h2>Un método, no una corazonada</h2>
+          </div>
+          <div class="methodology" id="methodologySteps"></div>
+          <div class="method-quotes" id="methodologyQuotes"></div>
+        </div>
+      </section>
+
+      <!-- ============ ARQUITECTURA ============ -->
+      <section class="section" id="arquitectura">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Arquitectura y forma de trabajo</span>
+            <h2>De la pantalla a la última fila de la base de datos</h2>
+            <p>Pasa el cursor sobre cada bloque.</p>
+          </div>
+          <div class="arch-diagram" id="archDiagram"></div>
+
+          <p class="section-head reveal" style="margin-top:4.5rem;">
+            <span class="eyebrow">From UI to Database</span>
+            <span style="display:block; font-family:var(--font-display); font-size:1.3rem; color:var(--text);">
+              "Del botón en pantalla hasta la última fila de la base de datos."
+            </span>
+          </p>
+          <div class="uitodb-flow reveal" id="uitodbFlow"></div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCIA ============ -->
       <section class="section" id="experiencia">
-        <div class="section-head reveal">
-          <span class="tag">Trayectoria</span>
-          <h2>Experiencia laboral</h2>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Aprendiz · Técnico en Desarrollo de Software</h3>
-              <p class="timeline-meta">Virgin Mobile &middot; Abril 2023 – Octubre 2023</p>
-              <!-- TODO: personaliza estos logros con tus tareas y resultados reales -->
-              <ul>
-                <li>Apoyo en el desarrollo y mantenimiento de aplicaciones de software.</li>
-                <li>Colaboración con el equipo de TI en tareas de soporte y documentación técnica.</li>
-                <li>Aplicación de buenas prácticas de control de versiones con Git y GitHub.</li>
-              </ul>
-            </div>
-          </article>
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Experiencia</span>
+            <h2>Trayectoria</h2>
+          </div>
+          <div class="experience-list" id="experienceList"></div>
         </div>
       </section>
 
-      <!-- Educación -->
-      <section class="section" id="educacion">
-        <div class="section-head reveal">
-          <span class="tag">Formación</span>
-          <h2>Educación</h2>
-        </div>
-        <div class="card reveal">
-          <div class="card-header">
-            <h3>Técnico en Programación de Software</h3>
-            <p class="card-subtitle">SENA</p>
+      <!-- ============ CASOS ============ -->
+      <section class="section" id="casos">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Casos seleccionados</span>
+            <h2>Casos profesionales anonimizados</h2>
+            <p>
+              Evidencia real de trabajo sobre una plataforma TMS empresarial, sin nombres de clientes, empleados,
+              tablas ni datos sensibles. Todo ejemplo de código es ilustrativo y ficticio.
+            </p>
           </div>
-          <p class="card-date">Julio 2022 – Octubre 2023</p>
-          <ul>
-            <li>Formación técnica en desarrollo, análisis y mantenimiento de software.</li>
-          </ul>
+          <div class="case-filters" id="caseFilters"></div>
+          <div class="cases-grid" id="casesGrid"></div>
         </div>
       </section>
 
-      <!-- Habilidades -->
-      <section class="section" id="habilidades">
-        <div class="section-head reveal">
-          <span class="tag">Stack</span>
-          <h2>Habilidades</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-card reveal">
-            <h3>Front-end</h3>
-            <ul class="skill-list">
-              <li><i class="fab fa-html5"></i> HTML5</li>
-              <li><i class="fab fa-css3-alt"></i> CSS3</li>
-              <li><i class="fab fa-js"></i> JavaScript</li>
-              <li><i class="fa-brands fa-git-alt"></i> Git</li>
-              <li><i class="fab fa-github"></i> GitHub</li>
-            </ul>
+      <!-- ============ BEHIND THE PROBLEM ============ -->
+      <section class="section" id="behind">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Behind the Problem</span>
+            <h2>Vista rápida de diagnóstico</h2>
+            <p>Síntoma → hipótesis → evidencia → causa → corrección. La misma disciplina, en formato exprés.</p>
           </div>
-          <div class="skill-card reveal">
-            <h3>Back-end</h3>
-            <ul class="skill-list">
-              <li><i class="fas fa-database"></i> PostgreSQL</li>
-              <li><i class="fa-brands fa-php"></i> PHP</li>
-              <li><i class="fas fa-server"></i> SQL</li>
-              <li><i class="fa-solid fa-desktop"></i> Mantenimiento de equipos</li>
-            </ul>
-          </div>
+          <div class="micro-grid" id="behindProblemGrid"></div>
         </div>
       </section>
 
-      <!-- Proyectos -->
+      <!-- ============ WHAT I ACTUALLY DO ============ -->
+      <section class="section" id="accion">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">What I actually do</span>
+            <h2>Verbos, no adjetivos</h2>
+          </div>
+          <div class="verbs reveal" id="verbsList"></div>
+          <p class="verb-example" id="verbExample"></p>
+        </div>
+      </section>
+
+      <!-- ============ PROYECTOS ============ -->
       <section class="section" id="proyectos">
-        <div class="section-head reveal">
-          <span class="tag">Portafolio</span>
-          <h2>Mis proyectos</h2>
-        </div>
-        <!-- TODO: reemplaza estas tarjetas por tus proyectos reales (imagen, descripción, enlaces a GitHub/demo) -->
-        <div class="projects-grid">
-          <article class="project-card reveal">
-            <div class="project-thumb"><i class="fa-solid fa-code"></i></div>
-            <div class="project-body">
-              <h3>Próximamente</h3>
-              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
-              <div class="project-links">
-                <a href="#" aria-disabled="true">Código</a>
-                <a href="#" aria-disabled="true">Demo</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-thumb"><i class="fa-solid fa-diagram-project"></i></div>
-            <div class="project-body">
-              <h3>Próximamente</h3>
-              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
-              <div class="project-links">
-                <a href="#" aria-disabled="true">Código</a>
-                <a href="#" aria-disabled="true">Demo</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card reveal">
-            <div class="project-thumb"><i class="fa-solid fa-layer-group"></i></div>
-            <div class="project-body">
-              <h3>Próximamente</h3>
-              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
-              <div class="project-links">
-                <a href="#" aria-disabled="true">Código</a>
-                <a href="#" aria-disabled="true">Demo</a>
-              </div>
-            </div>
-          </article>
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Proyectos personales</span>
+            <h2>Laboratorio propio</h2>
+            <p class="projects-lead">
+              Distinto de los casos profesionales de arriba: esto es lo que construyo por iniciativa propia,
+              fuera del contexto empresarial.
+            </p>
+          </div>
+          <div class="cases-grid" id="personalProjects" style="grid-template-columns: 1fr;"></div>
         </div>
       </section>
 
-      <!-- Contacto -->
-      <section class="section contact-section" id="contacto">
-        <div class="section-head reveal">
-          <span class="tag">Hablemos</span>
-          <h2>Contacto</h2>
+      <!-- ============ STACK ============ -->
+      <section class="section" id="stack">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Technical Snapshot</span>
+            <h2>Panel técnico</h2>
+          </div>
+          <div class="glass-card no-tilt snapshot-panel reveal">
+            <div class="snapshot-grid" id="snapshotGrid"></div>
+          </div>
+
+          <div class="section-head reveal" style="margin-top:4.5rem;">
+            <span class="eyebrow">Stack</span>
+            <h2>Por categoría, sin porcentajes inventados</h2>
+          </div>
+          <div class="stack-grid" id="stackGrid"></div>
         </div>
-        <ul class="contact-grid reveal">
-          <li>
-            <a href="mailto:stivencuestamena@gmail.com">
-              <i class="far fa-envelope"></i>
-              <span>stivencuestamena@gmail.com</span>
-            </a>
-          </li>
-          <li>
-            <a href="tel:+573124068418">
-              <i class="fas fa-phone"></i>
-              <span>+57 312 406 8418</span>
-            </a>
-          </li>
-          <li>
-            <!-- TODO: reemplazar con tu URL real de LinkedIn -->
-            <a href="https://www.linkedin.com/in/tu-perfil-de-linkedin/" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          </li>
-        </ul>
+      </section>
+
+      <!-- ============ ENGINEERING PRINCIPLES ============ -->
+      <section class="section" id="principios">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Engineering Principles</span>
+            <h2>Manifiesto técnico</h2>
+          </div>
+          <div class="principles-main" id="principlesMain"></div>
+          <div class="principles-secondary reveal" id="principlesSecondary"></div>
+        </div>
+      </section>
+
+      <!-- ============ FORMACIÓN ============ -->
+      <section class="section" id="formacion">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Formación</span>
+            <h2>Educación</h2>
+          </div>
+          <div class="glass-card no-tilt reveal" style="max-width:640px; margin:0 auto; padding:1.75rem 2rem;">
+            <h3 id="eduTitle"></h3>
+            <p class="exp-company" id="eduInstitution"></p>
+            <p class="exp-period" id="eduPeriod" style="display:inline-block; margin-bottom:.9rem;"></p>
+            <p id="eduDetail"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ DE 2023 A 2026 ============ -->
+      <section class="section" id="evolucion">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="evolution-badge"><b>2023</b> → <b style="color:var(--cyan)">2026</b></span>
+            <h2 style="margin-top:1rem;">De 2023 a 2026</h2>
+            <p>La misma marca, una evolución completa de narrativa, experiencia técnica y nivel de trabajo.</p>
+          </div>
+          <div class="timeline-wrap" id="timelineWrap">
+            <div class="timeline-line"></div>
+            <div class="timeline-line-fill"></div>
+            <div id="timelineItems"></div>
+          </div>
+          <div style="text-align:center;">
+            <a class="legacy-link" href="legacy-2023/index.html"><i class="fa-solid fa-clock-rotate-left"></i> Ver versión 2023</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ AVAILABLE FOR ============ -->
+      <section class="section" id="disponible">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="eyebrow">Available for</span>
+            <h2>Áreas de interés</h2>
+          </div>
+          <div class="available-for reveal" id="availableFor"></div>
+        </div>
+      </section>
+
+      <!-- ============ CTA FINAL + CONTACTO ============ -->
+      <section class="section" id="contacto">
+        <div class="container">
+          <div class="final-cta reveal">
+            <p class="lead">"Los sistemas complejos rara vez fallan por donde parecen fallar."</p>
+            <p class="sub">Yo trabajo hasta encontrar por qué.</p>
+          </div>
+
+          <div class="section-head reveal" style="margin-top:3.5rem;">
+            <span class="eyebrow">Hablemos</span>
+            <h2>¿Tienes un sistema que falla, un proceso que necesita automatización o un problema de datos?</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-links" id="contactLinks"></div>
+            <form class="glass-card no-tilt contact-form" id="contactForm">
+              <div class="field">
+                <label for="cf-name">Nombre</label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="cf-message">Mensaje</label>
+                <textarea id="cf-message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Hablemos</button>
+              <p style="font-size:0.75rem; color:var(--text-faint);">
+                Se abre tu cliente de correo con el mensaje listo para enviar — este sitio es estático y no envía datos a ningún servidor.
+              </p>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <img src="Imgs/Principal.png" alt="StivCrea" class="footer-logo" />
-      <p>© <span id="year"></span> StivCrea · Stiven Cuesta Mena. Todos los derechos reservados.</p>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="Imgs/brand/mark-square.png" alt="StivCrea" />
+            <div>
+              <strong>StivCrea</strong>
+              <p class="footer-legal">Stiven Cuesta Mena · Applications Analyst · Backend · Data · Automation</p>
+              <p class="footer-legal">Nombre legal: Estiven Cuesta Mena</p>
+            </div>
+          </div>
+          <nav class="footer-links">
+            <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="#contacto">Contacto</a>
+            <a href="legacy-2023/index.html">Versión 2023</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span id="footerYear"></span> StivCrea</span>
+          <span>Diseñado y construido por Stiven Cuesta Mena</span>
+        </div>
+      </div>
     </footer>
 
-    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
 
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/network.js"></script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/reveal.js"></script>
+    <script src="assets/js/cards.js"></script>
+    <script src="assets/js/render.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById("eduTitle").textContent = SITE_DATA.education.title;
+      document.getElementById("eduInstitution").textContent = SITE_DATA.education.institution;
+      document.getElementById("eduPeriod").textContent = SITE_DATA.education.period;
+      document.getElementById("eduDetail").textContent = SITE_DATA.education.detail;
+    </script>
   </body>
 </html>

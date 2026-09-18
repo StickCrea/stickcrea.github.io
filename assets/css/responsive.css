@@ -1,0 +1,91 @@
+/* responsive.css — ajustes por breakpoint. Mobile-first overrides. */
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-diagram {
+    height: 260px;
+  }
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-links {
+    position: fixed;
+    inset: 64px 0 0 0;
+    height: calc(100vh - 64px);
+    background: rgba(5, 7, 13, 0.97);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    transform: translateX(100%);
+    transition: transform var(--dur-mid) var(--ease-out);
+    gap: 0.25rem;
+    overflow-y: auto;
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .nav-links a {
+    width: 100%;
+    padding: 0.9rem 0.5rem;
+    font-size: 1.05rem;
+  }
+
+  .arch-diagram {
+    flex-direction: column;
+  }
+  .arch-arrow {
+    justify-content: center;
+    transform: rotate(90deg);
+  }
+
+  .agentfor-head {
+    flex-direction: column;
+    text-align: center;
+  }
+  .orb-labels {
+    display: none;
+  }
+
+  .decision-row {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-actions .btn {
+    width: 100%;
+  }
+  .hero-actions {
+    flex-direction: column;
+  }
+  .case-filters {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    margin: 0 -1.5rem 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* El cursor personalizado y la mayoría de microinteracciones de precisión
+   (tilt, spotlight) se desactivan por completo en touch vía JS
+   (ver utils.js -> isTouchDevice), no solo por CSS. */
+@media (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
