@@ -482,33 +482,6 @@
   box-shadow: 0 0 20px -4px var(--emerald);
 }
 
-/* ---------- Behind the Problem ---------- */
-.micro-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.25rem;
-}
-.micro-card {
-  padding: 1.4rem 1.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-}
-.micro-card .row {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: 0.6rem;
-  padding: 0.35rem 0;
-  border-bottom: 1px dashed var(--border);
-  color: var(--text-muted);
-}
-.micro-card .row:last-child {
-  border-bottom: none;
-}
-.micro-card .row b {
-  color: var(--cyan);
-  font-weight: 600;
-}
-
 /* ---------- What I actually do ---------- */
 .verbs {
   display: flex;
@@ -592,6 +565,41 @@
 }
 
 /* ---------- Stack ---------- */
+.stack-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2.5rem 0 2rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  transition: all var(--dur-fast) var(--ease-out);
+}
+.stack-toggle:hover {
+  color: var(--text);
+  border-color: var(--cyan);
+}
+.stack-toggle svg {
+  width: 12px;
+  height: 12px;
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.stack-toggle.open svg {
+  transform: rotate(180deg);
+}
+
+.stack-full {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--dur-mid) var(--ease-out);
+}
+.stack-full.open {
+  max-height: 1400px;
+}
+
 .stack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

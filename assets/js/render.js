@@ -227,24 +227,6 @@ function renderUiToDb() {
   }
 }
 
-/* ---------- Behind the Problem ---------- */
-function renderBehindProblem() {
-  const grid = $("#behindProblemGrid");
-  if (!grid) return;
-  grid.innerHTML = SITE_DATA.behindTheProblem
-    .map(
-      (m, i) => `
-    <div class="glass-card micro-card reveal" style="--i:${i}">
-      <div class="row"><b>Síntoma</b><span>${m.symptom}</span></div>
-      <div class="row"><b>Hipótesis</b><span>${m.hypothesis}</span></div>
-      <div class="row"><b>Evidencia</b><span>${m.evidence}</span></div>
-      <div class="row"><b>Causa</b><span>${m.cause}</span></div>
-      <div class="row"><b>Corrección</b><span>${m.correction}</span></div>
-    </div>`
-    )
-    .join("");
-}
-
 /* ---------- What I actually do ---------- */
 function renderActions() {
   const wrap = $("#verbsList");
@@ -441,7 +423,6 @@ function renderAll() {
   renderMethodology();
   renderArchitecture();
   renderUiToDb();
-  renderBehindProblem();
   renderActions();
   renderPrinciples();
   renderSnapshot();

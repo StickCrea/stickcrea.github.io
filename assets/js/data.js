@@ -294,30 +294,6 @@ const SITE_DATA = {
 
   uiToDb: ["UI", "Backend", "SQL", "Integration", "Response", "Audit"],
 
-  behindTheProblem: [
-    {
-      symptom: "Integración con el ERP falla de forma intermitente.",
-      hypothesis: "¿Problema de red o timeout puntual?",
-      evidence: "Las fallas se agrupan por interfaz, no de forma aleatoria.",
-      cause: "Desbordamiento de entero en un conector .NET.",
-      correction: "Corrección del registro duplicado en el origen del dato.",
-    },
-    {
-      symptom: "El portal de clientes muestra reportes inconsistentes.",
-      hypothesis: "¿El código de reporte tiene un error de lógica?",
-      evidence: "Un filtro de fecha excluye sistemáticamente el último día.",
-      cause: "Parámetro de fecha truncado silenciosamente en el procedimiento.",
-      correction: "Ajuste del procedimiento, validado con datos reales.",
-    },
-    {
-      symptom: "Un payload XML es rechazado de forma intermitente.",
-      hypothesis: "¿El servicio externo cambió su validación?",
-      evidence: "Dos campos del mismo payload no coinciden en su redondeo.",
-      cause: "Cálculo de redondeo inconsistente entre campos relacionados.",
-      correction: "Normalización del cálculo antes del envío.",
-    },
-  ],
-
   actions: [
     { verb: "Diagnose", example: "Aislé un desbordamiento de entero en un conector .NET hasta su causa raíz." },
     { verb: "Build", example: "Diseñé un motor centralizado de anulaciones ante el RNDC." },

@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCardInteractions();
   initCursor();
   initContactForm();
+  initStackToggle();
 
   // ---- Red de nodos del Hero ----
   const canvas = $("#heroNetwork");
@@ -61,6 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
  * vez de enviarlos a un servicio de terceros. No se guarda ni se
  * transmite nada a servidores propios.
  */
+/**
+ * initStackToggle — el panel técnico (Technical Snapshot) es la vista
+ * rápida pensada para un visitante no técnico; el stack completo por
+ * categoría queda un clic más abajo para quien sí quiere profundizar
+ * (recruiter/perfil técnico), en vez de duplicar la sección.
+ */
+function initStackToggle() {
+  const btn = $("#stackToggle");
+  const panel = $("#stackFull");
+  if (!btn || !panel) return;
+  btn.addEventListener("click", () => {
+    const open = panel.classList.toggle("open");
+    btn.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+    btn.childNodes[0].textContent = open ? "Ocultar stack completo " : "Ver stack completo ";
+  });
+}
+
 function initContactForm() {
   const form = $("#contactForm");
   if (!form) return;
