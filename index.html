@@ -1,134 +1,270 @@
-<!--Creado por Stiven Cuesta mena -->
+<!--
+  Portafolio de Stiven Cuesta Mena (StivCrea)
+  Reconstrucción 2026 del portafolio original de 2023.
+-->
 <!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="Imgs/Bg/Logo-Sn.png" type="image/x-icon" class="favicon" />
-    <title>StivCrea</title>
-    <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/51877c6006.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <meta name="description" content="Portafolio de Stiven Cuesta Mena — Técnico en Desarrollo de Software." />
+    <link rel="shortcut icon" href="Imgs/Bg/Logo-Sn.png" type="image/png" />
+    <title>StivCrea · Stiven Cuesta Mena</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <!-- Menu.Nav con marca-Logo-->
-    <header>
-      <div class="Img0">
-        <img class="Img1" src="Imgs/Bg/Logo-Sn.png" />
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="site-header" id="top">
+      <div class="nav-wrap">
+        <a class="brand" href="#top" aria-label="StivCrea, inicio">
+          <img src="Imgs/Principal.png" alt="StivCrea" class="brand-logo" />
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primaryNav">
+          <ul>
+            <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+            <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+            <li><a href="#educacion" class="nav-link">Educación</a></li>
+            <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+            <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+            <li><a href="#contacto" class="nav-link nav-cta">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-    
-      <nav>
-        <ul>
-          <li class="firts"><a href="index-sobremi.html">Sobre mí</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
-          <li><a href="#educacion">Educación</a></li>
-          <li><a href="#habilidades">Habilidades</a></li>
-          <li><a href="#proyects">Mis Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <div class="animation start-home"></div>
-        </ul>
-      </nav>
     </header>
-<!-- sobre Mí-->
-    <main>
-<!-- Expriencia-->
-      <section class="experiencia" id="experiencia" >
-        <h2 >Experiencia laboral</h2>
-        <ul>
-          <li>
-            <h3>Aprendiz- Tecnico en Desarrollo de Software</h3>
-            <p><strong>Empresa:</strong> Virgin Mobile </p>
-            <p><strong>Fecha:</strong> Abril 2023 - Octubre 2023</p>
-            <ul>
-              <li>Logros y responsabilidades en el trabajo.</li>
-            </ul>
-          </li>
-       
-        </ul>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="hero" id="inicio">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Hola, soy</p>
+          <h1>Stiven Cuesta Mena</h1>
+          <p class="role">Técnico en Desarrollo de Software</p>
+          <p class="lead">
+            Apasionado por resolver problemas con análisis profundo y soluciones lógicas y efectivas.
+            Disfruto trabajar en equipo y aportar ideas que sumen valor a cada proyecto.
+          </p>
+          <div class="hero-actions">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-ghost">Contáctame</a>
+          </div>
+          <ul class="hero-social">
+            <li>
+              <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <!-- TODO: reemplazar con tu URL real de LinkedIn -->
+              <a href="https://www.linkedin.com/in/tu-perfil-de-linkedin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:stivencuestamena@gmail.com" aria-label="Correo electrónico">
+                <i class="far fa-envelope"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-media reveal">
+          <div class="hero-blob"></div>
+          <img src="Imgs/Img-Logo/perfil.png" alt="Foto de Stiven Cuesta Mena" class="hero-photo" />
+        </div>
       </section>
 
-      <section class="educacion" id="educacion">
-        <h2 class="section-title">Educación</h2>
-        <div class="card">
+      <!-- Sobre mí -->
+      <section class="section" id="sobre-mi">
+        <div class="section-head reveal">
+          <span class="tag">Sobre mí</span>
+          <h2>¿Quién soy?</h2>
+        </div>
+        <div class="about-grid reveal">
+          <p>
+            Soy un joven apasionado por desafiarme cada día y aprender de nuevas experiencias.
+            Mi enfoque consiste en abordar los problemas con un análisis profundo y una comprensión
+            sólida, buscando siempre soluciones lógicas y efectivas.
+          </p>
+          <p>
+            Mi capacidad para generar y gestionar ideas que beneficien a todos es una de mis principales
+            fortalezas. Además, disfruto trabajar en equipo de manera eficiente, colaborando con mis
+            compañeros y contribuyendo al éxito del grupo. Siempre estoy dispuesto a ayudar y me esfuerzo
+            al máximo por ofrecer las mejores soluciones posibles.
+          </p>
+        </div>
+      </section>
+
+      <!-- Experiencia -->
+      <section class="section" id="experiencia">
+        <div class="section-head reveal">
+          <span class="tag">Trayectoria</span>
+          <h2>Experiencia laboral</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h3>Aprendiz · Técnico en Desarrollo de Software</h3>
+              <p class="timeline-meta">Virgin Mobile &middot; Abril 2023 – Octubre 2023</p>
+              <!-- TODO: personaliza estos logros con tus tareas y resultados reales -->
+              <ul>
+                <li>Apoyo en el desarrollo y mantenimiento de aplicaciones de software.</li>
+                <li>Colaboración con el equipo de TI en tareas de soporte y documentación técnica.</li>
+                <li>Aplicación de buenas prácticas de control de versiones con Git y GitHub.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Educación -->
+      <section class="section" id="educacion">
+        <div class="section-head reveal">
+          <span class="tag">Formación</span>
+          <h2>Educación</h2>
+        </div>
+        <div class="card reveal">
           <div class="card-header">
-            <h3 class="card-title">PROGRAMCION DE SOFTWARE</h3>
-            <p class="card-subtitle">Institución: Sena</p>
+            <h3>Técnico en Programación de Software</h3>
+            <p class="card-subtitle">SENA</p>
           </div>
-          <div class="card-body">
-            <p class="card-date">
-              <strong>Fecha:</strong> Julio 2022 y Octubre 2023
-            </p>
-            <ul class="card-description">
-              <li>Tecnico en desarrollo de software.</li>
+          <p class="card-date">Julio 2022 – Octubre 2023</p>
+          <ul>
+            <li>Formación técnica en desarrollo, análisis y mantenimiento de software.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section class="section" id="habilidades">
+        <div class="section-head reveal">
+          <span class="tag">Stack</span>
+          <h2>Habilidades</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card reveal">
+            <h3>Front-end</h3>
+            <ul class="skill-list">
+              <li><i class="fab fa-html5"></i> HTML5</li>
+              <li><i class="fab fa-css3-alt"></i> CSS3</li>
+              <li><i class="fab fa-js"></i> JavaScript</li>
+              <li><i class="fa-brands fa-git-alt"></i> Git</li>
+              <li><i class="fab fa-github"></i> GitHub</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Back-end</h3>
+            <ul class="skill-list">
+              <li><i class="fas fa-database"></i> PostgreSQL</li>
+              <li><i class="fa-brands fa-php"></i> PHP</li>
+              <li><i class="fas fa-server"></i> SQL</li>
+              <li><i class="fa-solid fa-desktop"></i> Mantenimiento de equipos</li>
             </ul>
           </div>
         </div>
       </section>
 
-      <table>
-        <caption id="habilidades">
-          <h3>Habilidades DS</h3>
-        </caption>
-        <tr>
-          <th id="Front">Front-end</th>
-          <td id="icon">
-            <ul>
-              <li><i class="fab fa-html5"></i> HTML5</li>
-              <li><i class="fab fa-css3-alt"></i> CSS</li>
-              <li><i class="fab fa-js"></i> JavaScript</li>
-              <li><i class="fa-brands fa-square-git"></i>Git</li>
-              <li><i class="fa-brands fa-github"></i>Git Hub</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <th id="Back">Back-end</th>
-          <td>
-            <ul>
-              <li><i class="fab fa-postgresql"></i> PostgreSQL</li>
-              <li><i class="fa-brands fa-php"></i> PHP</li>
-              <li><i class="fas fa-database"></i> SQL</li>
-              <li>
-                <i class="fa-solid fa-desktop"></i> Mantenimiento de Equipos de
-                cómputo a nivel de software
-              </li>
-            </ul>
-          </td>
-        </tr>
-      </table>
-      <hr />
+      <!-- Proyectos -->
+      <section class="section" id="proyectos">
+        <div class="section-head reveal">
+          <span class="tag">Portafolio</span>
+          <h2>Mis proyectos</h2>
+        </div>
+        <!-- TODO: reemplaza estas tarjetas por tus proyectos reales (imagen, descripción, enlaces a GitHub/demo) -->
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-thumb"><i class="fa-solid fa-code"></i></div>
+            <div class="project-body">
+              <h3>Próximamente</h3>
+              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
+              <div class="project-links">
+                <a href="#" aria-disabled="true">Código</a>
+                <a href="#" aria-disabled="true">Demo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-thumb"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="project-body">
+              <h3>Próximamente</h3>
+              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
+              <div class="project-links">
+                <a href="#" aria-disabled="true">Código</a>
+                <a href="#" aria-disabled="true">Demo</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="project-thumb"><i class="fa-solid fa-layer-group"></i></div>
+            <div class="project-body">
+              <h3>Próximamente</h3>
+              <p>Este espacio está reservado para uno de mis proyectos. ¡Vuelve pronto!</p>
+              <div class="project-links">
+                <a href="#" aria-disabled="true">Código</a>
+                <a href="#" aria-disabled="true">Demo</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <section id="proyects"></section>
-    </main>
-
-    <footer>
-      <div class="Imgpie"><img src="Imgs/Bg/Logo-principal-Footer.png" class="imgpi2" ></div>
-      
-      <section id="contacto"  class="Info">
-        
-        <h2>Contacto</h2>
-        <ul>
+      <!-- Contacto -->
+      <section class="section contact-section" id="contacto">
+        <div class="section-head reveal">
+          <span class="tag">Hablemos</span>
+          <h2>Contacto</h2>
+        </div>
+        <ul class="contact-grid reveal">
           <li>
-            <i class="far fa-envelope"></i> Correo electrónico:
-            <a href="mailto:stivencuestamena@gmail.com">stivencuestamena@gmail.com</a>
+            <a href="mailto:stivencuestamena@gmail.com">
+              <i class="far fa-envelope"></i>
+              <span>stivencuestamena@gmail.com</span>
+            </a>
           </li>
-          <li><i class="fas fa-phone"></i> Teléfono: 3124068418</li>
           <li>
-            <i class="fab fa-linkedin"></i>
-            <a href="https://www.linkedin.com/in/tu-perfil-de-linkedin/"
-              >LinkedIn</a
-            >
+            <a href="tel:+573124068418">
+              <i class="fas fa-phone"></i>
+              <span>+57 312 406 8418</span>
+            </a>
+          </li>
+          <li>
+            <!-- TODO: reemplazar con tu URL real de LinkedIn -->
+            <a href="https://www.linkedin.com/in/tu-perfil-de-linkedin/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/stickcrea" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
           </li>
         </ul>
       </section>
-      <hr />
-     <div class="der">© 2023 StivCrea_Stiven_Cuesta-Mena. Todos los derechos reservados.</div> 
+    </main>
+
+    <footer class="site-footer">
+      <img src="Imgs/Principal.png" alt="StivCrea" class="footer-logo" />
+      <p>© <span id="year"></span> StivCrea · Stiven Cuesta Mena. Todos los derechos reservados.</p>
     </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
