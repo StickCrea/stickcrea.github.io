@@ -439,6 +439,6 @@ const SITE_DATA = {
   contact: {
     email: "stivencuestamena@gmail.com",
     github: "https://github.com/stickcrea",
-    linkedin: null, // TODO: agregar URL real de LinkedIn
+    linkedin: "https://www.linkedin.com/in/stiven-cuesta-mena-59685a245/",
   },
 };
