@@ -9,9 +9,10 @@
 
 const SITE_DATA = {
   identity: {
-    displayName: "Stiven Cuesta Mena",
-    legalName: "Estiven Cuesta Mena",
+    displayName: "Stiven Cuesta",
     brand: "StivCrea",
+    location: "Bogotá, Colombia",
+    locationFlag: "🇨🇴",
     role: "Applications Analyst",
     rotating: [
       "Applications Analyst",

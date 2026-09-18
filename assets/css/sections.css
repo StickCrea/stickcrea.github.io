@@ -63,6 +63,32 @@
   50% { opacity: 0; }
 }
 
+.hero .location-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 1.4rem;
+}
+
+.flag-co {
+  display: inline-block;
+  width: 18px;
+  height: 12px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px var(--border-strong);
+  flex-shrink: 0;
+}
+
+.footer-legal .flag-co {
+  vertical-align: middle;
+  margin-right: 0.35rem;
+  margin-bottom: 2px;
+}
+
 .hero .pitch {
   max-width: 620px;
   margin: 0 auto 2.2rem;

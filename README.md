@@ -1,9 +1,8 @@
-# StivCrea 2.0 — Portafolio de Stiven Cuesta Mena
+# StivCrea 2.0 — Portafolio de Stiven Cuesta
 
-Portafolio personal de **Stiven Cuesta Mena** (nombre legal: Estiven Cuesta Mena),
-bajo la marca **StivCrea**. Reconstrucción 2026 del portafolio original de 2023,
-que se conserva íntegro en [`/legacy-2023`](legacy-2023/index.html) como archivo
-histórico.
+Portafolio personal de **Stiven Cuesta**, bajo la marca **StivCrea**.
+Reconstrucción 2026 del portafolio original de 2023, que se conserva íntegro en
+[`/legacy-2023`](legacy-2023/index.html) como archivo histórico.
 
 Posicionamiento: **Applications Analyst · Backend · Data · Automation**.
 
